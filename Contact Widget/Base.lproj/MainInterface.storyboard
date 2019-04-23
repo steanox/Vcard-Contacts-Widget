@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Contact_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-Xe-Zqu">
+                                <rect key="frame" x="20" y="15.5" width="104.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-bA-ec5">
+                                <rect key="frame" x="20" y="66" width="77.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSF-hu-pfI">
+                                <rect key="frame" x="251" y="10" width="51" height="31"/>
+                                <connections>
+                                    <action selector="generateAction:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="AE2-lT-2BF"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s72-cq-NUF">
+                                <rect key="frame" x="251" y="61" width="51" height="31"/>
+                                <connections>
+                                    <action selector="generateAction:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="Gqc-UR-Fbb"/>
+                                </connections>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfj-Lh-W0r">
+                                <rect key="frame" x="60" y="156" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gfj-Lh-W0r" secondAttribute="height" multiplier="1:1" id="PIS-H1-lWF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tSF-hu-pfI" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="10" id="1hG-nV-6Ac"/>
+                            <constraint firstItem="s72-cq-NUF" firstAttribute="top" secondItem="tSF-hu-pfI" secondAttribute="bottom" constant="20" id="CjZ-ps-Elt"/>
+                            <constraint firstItem="3tL-Xe-Zqu" firstAttribute="centerY" secondItem="tSF-hu-pfI" secondAttribute="centerY" id="Q9G-3x-idM"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="gfj-Lh-W0r" secondAttribute="bottom" constant="10" id="W75-3q-1aL"/>
+                            <constraint firstItem="q3d-bA-ec5" firstAttribute="centerY" secondItem="s72-cq-NUF" secondAttribute="centerY" id="aLr-LY-EyT"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="gfj-Lh-W0r" secondAttribute="trailing" constant="60" id="cYp-5P-ZwX"/>
+                            <constraint firstItem="q3d-bA-ec5" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="20" id="f1F-jL-DDZ"/>
+                            <constraint firstItem="gfj-Lh-W0r" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="60" id="f6S-6f-0ac"/>
+                            <constraint firstAttribute="trailing" secondItem="tSF-hu-pfI" secondAttribute="trailing" constant="20" id="sC4-kH-51o"/>
+                            <constraint firstItem="3tL-Xe-Zqu" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="ufu-ST-Y9y"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="s72-cq-NUF" secondAttribute="trailing" constant="20" id="xYp-ch-Ha6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="400"/>
+                    <connections>
+                        <outlet property="personalMailSwitch" destination="tSF-hu-pfI" id="9ub-4x-xB2"/>
+                        <outlet property="qrImage" destination="gfj-Lh-W0r" id="Jf7-O8-OSW"/>
+                        <outlet property="workMailSwitch" destination="s72-cq-NUF" id="mCb-L9-jdM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
